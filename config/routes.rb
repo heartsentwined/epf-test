@@ -1,4 +1,7 @@
 EpfTest::Application.routes.draw do
+  resources :foos, :bars, :bazs
+  root to: 'home#index'
+  get '*ember' => 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -39,7 +42,7 @@ EpfTest::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
